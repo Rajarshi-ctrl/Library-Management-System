@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="form-popup" id="myForm">
+	<form action="/update/{{item.id}}" method="get" class="form-container" method="post">
+	  <h1>Update Books</h1>
+  
+	  <label for="email"><b>Name</b></label>
+	  <input type="text" value="{{ item.name }}" placeholder="Book Name" name="name" required>
+  
+	  <label for="email"><b>Author</b></label>
+      <input type="text" placeholder="Author Name" name="auther" required>
+
+	  <label for="psw"><b>Description</b></label>
+	  <input type="text" value="{{ item.desc }}" placeholder="Enter Description" name="desc" required>
+  
+	  <button type="submit" name="update" class="btn">Update</button>
+	</form>
+  </div>
+  
+{% endblock %}

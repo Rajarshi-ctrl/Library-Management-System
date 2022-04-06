@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<h2><u>Books List</u></h2>
+
+{% for i in data %}
+<div style="margin: 30px;">
+	<h4> {{i.name}} </h4>
+	<span><i> {{i.auther}} </i></span>
+	<p style="padding-left: 20px;"> {{i.desc}} </p>		
+</div>
+{% endfor %}
+
+{% endblock %}
